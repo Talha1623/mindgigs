@@ -207,31 +207,12 @@
   <a href="#"><i class="bi bi-briefcase"></i> Projects</a>
   <a href="{{ route('logout') }}"
      onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+     
      <i class="bi bi-box-arrow-right"></i> Logout
   </a>
   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf
   </form>
-</div>
-
-<!-- Topbar -->
-<div class="topbar">
-  <button class="sidebar-toggle-btn" id="sidebarToggle">
-    <i class="bi bi-list"></i>
-  </button>
-  <div>
-    <button class="btn btn-outline-primary btn-sm">POS</button>
-  </div>
-  <div class="profile d-flex align-items-center gap-3">
-    <i class="bi bi-globe"></i>
-    <i class="bi bi-bell"></i>
-    <span class="badge bg-success rounded-pill">3</span>
-    <img src="https://i.pravatar.cc/40" alt="Profile" class="rounded-circle" width="36" height="36">
-    <div>
-      <strong>{{ Auth::user()->name }}</strong><br/>
-      <small class="text-muted">Admin</small>
-    </div>
-  </div>
 </div>
 
 <!-- Main Content -->

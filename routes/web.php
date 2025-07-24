@@ -3,7 +3,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\InternController;
 
 use App\Http\Controllers\VisitorController;
 Route::get('/', function () {
@@ -29,3 +29,7 @@ Route::get('/today-deals', [VisitorController::class, 'todayDeals'])->name('toda
 
 
 Route::get('/projcts', [DashboardController::class, 'projects'])->name('projects');
+
+Route::resource('interns', InternController::class);
+Route::get('/interns/{id}/edit', [InternController::class, 'edit'])->name('interns.edit');
+Route::put('/interns/{id}', [InternController::class, 'update'])->name('interns.update');

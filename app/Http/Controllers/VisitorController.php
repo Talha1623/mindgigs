@@ -81,7 +81,7 @@ public function todayDeals()
 
     return view('visitors.today-deals', compact('visitors', 'totalVisitors'));
 }
-
+ 
 
 
     
